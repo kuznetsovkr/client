@@ -14,6 +14,7 @@ import { Chessboard } from "react-chessboard";
 import { Chess } from "chess.js";
 import CustomDialog from "./components/CustomDialog";
 import socket from "./socket";
+import Container from "@mui/material/Container";
 
 function Game({ players, room, orientation, cleanup }) {
   const chess = useMemo(() => new Chess(), []); // <- 1
@@ -25,15 +26,15 @@ function Game({ players, room, orientation, cleanup }) {
       try {
         const result = chess.move(move); // update Chess instance
         setFen(chess.fen()); // update fen state to trigger a re-render
-  
+
         console.log("over, checkmate", chess.isGameOver(), chess.isCheckmate());
-  
+
         if (chess.isGameOver()) { // check if move led to "game over"
           if (chess.isCheckmate()) { // if reason for game over is a checkmate
-            // Set message to checkmate. 
+            // Set message to checkmate.
             setOver(
               `Checkmate! ${chess.turn() === "w" ? "black" : "white"} wins!`
-            ); 
+            );
             // The winner is determined by checking for which side made the last move
           } else if (chess.isDraw()) { // if it is a draw
             setOver("Draw"); // set message to "Draw"
@@ -41,7 +42,7 @@ function Game({ players, room, orientation, cleanup }) {
             setOver("Game over");
           }
         }
-  
+
         return result;
       } catch (e) {
         return null;
@@ -83,13 +84,13 @@ function Game({ players, room, orientation, cleanup }) {
     });
   }, [makeAMove]);
 
-  	
+
   useEffect(() => {
     socket.on('playerDisconnected', (player) => {
       setOver(`${player.username} has disconnected`); // set game over
     });
   }, []);
-  
+
   useEffect(() => {
     socket.on('closeRoom', ({ roomId }) => {
       console.log('closeRoom', roomId, room)
@@ -101,7 +102,7 @@ function Game({ players, room, orientation, cleanup }) {
 
   // Game component returned jsx
   return (
-    <Stack>
+    <Container>
       <Card>
         <CardContent>
           <Typography variant="h5">Room ID: {room}</Typography>
@@ -109,14 +110,14 @@ function Game({ players, room, orientation, cleanup }) {
       </Card>
       <Stack flexDirection="row" sx={{ pt: 2 }}>
         <div className="board" style={{
-          maxWidth: 600,
-          maxHeight: 600,
+          maxWidth: 500,
+          maxHeight: 500,
           flexGrow: 1,
         }}>
           <Chessboard
-            position={fen}
-            onPieceDrop={onDrop}
-            boardOrientation={orientation}
+              position={fen}
+              onPieceDrop={onDrop}
+              boardOrientation={orientation}
           />
         </div>
         {players.length > 0 && (
@@ -141,7 +142,7 @@ function Game({ players, room, orientation, cleanup }) {
           cleanup();
         }}
       />
-    </Stack>
+    </Container>
   );
 }
 

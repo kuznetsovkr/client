@@ -1,0 +1,53 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  z-index: -1;
+  background-image: url(/image/main_board.webp);
+  background-repeat: no-repeat; /* Отменяем повторение фона */
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+body {
+  background: #281A12;
+  background: radial-gradient(at left top, #3D281D, #0F090D);
+  z-index: 2;
+}
+
+#title {
+  color: #eec491;
+  font-family: Cenotaph-Titling;
+  font-size: 48px;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#welcome_text {
+  color: #897566;
+  font-size: 18px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 15px;
+  width: 200px;
+  height: 40px;
+  background: none;
+  border-color: #ceb99f;
+}
+
+@font-face {
+  font-family: "Cenotaph-Titling";
+  src: url(/fonts/Cenotaph-Titling.otf);
+}
+
+/*# sourceMappingURL=hello.css.map */
