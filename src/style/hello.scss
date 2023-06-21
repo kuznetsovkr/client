@@ -1,12 +1,11 @@
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 .container {
   height: 100vh;
   z-index: -1;
-  background-image: url(/image/main_board.webp);
+  background-image: url(../image/main_board.webp);
   background-repeat: no-repeat; /* Отменяем повторение фона */
   background-size: 100% auto;
   background-position: center bottom;
@@ -24,6 +23,7 @@ body {
   font-weight: bold;
   border: 1px solid white;
   border-radius: 10px;
+  margin: 0;
 }
 #welcome_text {
   color: #897566;
@@ -42,5 +42,5 @@ button {
 
 @font-face {
   font-family: 'Cenotaph-Titling';
-  src: url(/fonts/Cenotaph-Titling.otf);
+  src: url(../fonts/Cenotaph-Titling.otf);
 }

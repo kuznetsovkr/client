@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import Container from "@mui/material/Container";
 import Game from "./Game";
 import InitGame from "./InitGame";
-import CustomDialog from "./components/CustomDialog";
+import CustomDialog from "../CustomDialog";
 import socket from "./socket";
 import {Button, TextField} from "@mui/material";
 import {NavLink} from "react-router-dom";

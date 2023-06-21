@@ -12,7 +12,7 @@ import {
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { Chessboard } from "react-chessboard";
 import { Chess } from "chess.js";
-import CustomDialog from "./components/CustomDialog";
+import CustomDialog from "../CustomDialog";
 import socket from "./socket";
 import Container from "@mui/material/Container";
 

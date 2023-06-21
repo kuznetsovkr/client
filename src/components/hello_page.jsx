@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import "./style/hello.scss";
+import "../style/hello.css";
 
 const hello_page = () => {
     return (
