@@ -1,0 +1,35 @@
+#logo {
+  width: 64px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  justify-content: space-between;
+  background: #ced4da;
+  border-bottom: 1px solid #828282;
+}
+
+#container_with_logo {
+  display: flex;
+  flex-direction: row;
+}
+
+#container_with_button #to_login {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  color: #1c1a1a;
+}
+
+header #to_main {
+  font-family: Cenotaph-Titling;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: #1c1a1a;
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,3 +1,48 @@
+#main_container {
+  height: 100vh;
+}
 
+#main_content {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#with_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin-left: 50px;
+  font-family: Montserrat;
+  border: 1px solid #828282;
+  border-radius: 10px;
+}
+
+#with_button button {
+  width: 70%;
+  height: 50px;
+  border: 1px solid;
+  margin: 10px 0;
+  border-radius: 15px;
+}
+
+.text_in_button {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  color: #f1faee;
+}
 
 /*# sourceMappingURL=chess_board.css.map */

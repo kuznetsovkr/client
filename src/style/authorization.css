@@ -1,0 +1,39 @@
+.authorization_form {
+  border: 1px solid #828282;
+  border-radius: 10px;
+  width: 40%;
+  height: 40vh;
+  font-family: Montserrat;
+  margin: 10px auto 0;
+}
+
+.authorization_header {
+  background: #E1E289;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #828282;
+}
+
+.authorization_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.authorization_form input {
+  width: 40%;
+  margin: 10px 0;
+  font-family: Montserrat;
+  height: 30px;
+}
+
+.authorization_btn {
+  width: 30%;
+  margin: 10px 0;
+  color: #14591D;
+}
+
+/*# sourceMappingURL=authorization.css.map */

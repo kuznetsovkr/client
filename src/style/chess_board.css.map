@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"chess_board.css"}
+{"version":3,"sourceRoot":"","sources":["chess_board.scss"],"names":[],"mappings":"AAAA;EACE;;;AAEF;EACE;EACA;EACA;;;AAEF;EACE;EACA;;;AAEF;EACE;EACA;;;AAEF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA;EACA","file":"chess_board.css"}

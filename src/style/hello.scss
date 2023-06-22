@@ -2,42 +2,144 @@ html, body {
   margin: 0;
   padding: 0;
 }
-.container {
+
+#welcome_page .welcome_container {
+
   height: 100vh;
   z-index: -1;
-  background-image: url(../image/main_board.webp);
-  background-repeat: no-repeat; /* Отменяем повторение фона */
-  background-size: 100% auto;
+  background-image: url(../image/welcome_background.svg);
+  background-repeat: no-repeat;
+  background-size: auto 40%;
   background-position: center bottom;
   background-attachment: fixed;
 }
-body {
+#welcome_page {
   background: #281A12;
   background: radial-gradient(at left top, #3D281D, #0F090D);
   z-index: 2;
+}
+#welcome_content {
+  position: relative;
+  left: 5%;
+  top: 5%;
 }
 #title {
   color: #eec491;
   font-family: Cenotaph-Titling;
   font-size: 48px;
   font-weight: bold;
-  border: 1px solid white;
-  border-radius: 10px;
   margin: 0;
+
 }
 #welcome_text {
-  color: #897566;
+  color: #c9a588;
   font-size: 18px;
-  border: 1px solid white;
-  border-radius: 10px;
+  font-family: Montserrat;
 }
-button {
+#welcome_page button {
   border-radius: 15px;
   width: 200px;
   height: 40px;
   background: none;
-  border-color: #ceb99f;
+  border-color: #eec491;
+}
+#welcome_page button:hover{
+  background: #eec491;
+}
+#welcome_page button:hover #welcome_button{
+  color:#281A12;
+}
+#welcome_page button #welcome_button {
+  text-decoration: none;
+  color: #eec491;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+}
+.moving-image {
+  position: absolute;
+}
 
+
+
+@media (min-width: 1100px){
+  .moving-image {
+    width: 20%;
+    right:12%;
+    bottom: 15%;
+  }
+}
+@media (min-width: 990px) and (max-width: 1100px){
+  .moving-image {
+    width: 25%;
+    right:5%;
+    bottom: 15%;
+  }
+}
+
+/*desktop*/
+@media (min-width: 990px){
+  #welcome_content {
+    width: 45%;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  #welcome_content {
+    width: 50%;
+  }
+
+  .moving-image {
+    width: 30%;
+    right:5%;
+    bottom: 15%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  #welcome_content {
+    width: 60%;
+  }
+}
+@media (min-width: 705px) and (max-width: 768px){
+  .moving-image {
+    width: 30%;
+    left:65%;
+    top: 10%;
+  }
+}
+
+@media (min-width: 535px) and (max-width: 705px){
+  .moving-image {
+    width: 32%;
+    right:5%;
+    top: 20%;
+  }
+}
+@media (min-width: 480px) and (max-width: 535px){
+  .moving-image {
+    width: 35%;
+    left:60%;
+    top: 30%;
+  }
+}
+
+/*mobile*/
+@media (max-width: 480px) {
+  #welcome_content {
+    width: 70%;
+  }
+  .moving-image {
+    width: 43%;
+    right:4%;
+    bottom: 2%;
+  }
+}
+@media (max-width: 410px){
+  #welcome_text{
+    font-size: 16px;
+  }
 }
 
 @font-face {
