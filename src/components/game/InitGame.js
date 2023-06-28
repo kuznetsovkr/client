@@ -17,8 +17,8 @@ export default function InitGame({ setRoom, setOrientation, setPlayers }) {
       <CustomDialog
         open={roomDialogOpen}
         handleClose={() => setRoomDialogOpen(false)}
-        title="Select Room to Join"
-        contentText="Enter a valid room ID to join the room"
+        title="Подключение к комнате"
+        contentText="Введите ID для подключения к комнате"
         handleContinue={() => {
           // join a room
           if (!roomInput) return; // if given room input is valid, do nothing.
@@ -47,7 +47,7 @@ export default function InitGame({ setRoom, setOrientation, setPlayers }) {
           variant="standard"
           error={Boolean(roomError)}
           helperText={
-            !roomError ? "Enter a room ID" : `Invalid room ID: ${roomError}`
+            !roomError ? "Введите ID комнаты" : `Ошибка в ID: ${roomError}`
           }
         />
       </CustomDialog>
@@ -62,7 +62,7 @@ export default function InitGame({ setRoom, setOrientation, setPlayers }) {
           });
         }}
       >
-        Start a game
+        Начать игру
       </Button>
       {/* Button for joining a game */}
       <Button
@@ -70,7 +70,7 @@ export default function InitGame({ setRoom, setOrientation, setPlayers }) {
           setRoomDialogOpen(true);
         }}
       >
-        Join a game
+        Присоединиться к игре
       </Button>
     </Stack>
   );

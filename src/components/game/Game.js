@@ -33,13 +33,13 @@ function Game({ players, room, orientation, cleanup }) {
           if (chess.isCheckmate()) { // if reason for game over is a checkmate
             // Set message to checkmate.
             setOver(
-              `Checkmate! ${chess.turn() === "w" ? "black" : "white"} wins!`
+              `Мат! ${chess.turn() === "w" ? "черные" : "белые"} победили!`
             );
             // The winner is determined by checking for which side made the last move
           } else if (chess.isDraw()) { // if it is a draw
-            setOver("Draw"); // set message to "Draw"
+            setOver("Ничья"); // set message to "Draw"
           } else {
-            setOver("Game over");
+            setOver("Игра окончена");
           }
         }
 
@@ -105,7 +105,7 @@ function Game({ players, room, orientation, cleanup }) {
     <Container>
       <Card>
         <CardContent>
-          <Typography variant="h5">Room ID: {room}</Typography>
+          <Typography variant="h5">ID комнаты: {room}</Typography>
         </CardContent>
       </Card>
       <Stack flexDirection="row" sx={{ pt: 2 }}>

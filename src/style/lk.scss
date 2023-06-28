@@ -1,0 +1,21 @@
+#body_lk{
+  font-family: Montserrat;
+  border: 1px solid #1c1a1a;
+  border-radius: 20px;
+  width: 50%;
+  margin: 15px auto 0;
+  padding: 10px;
+}
+#history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#history p {
+  margin: 5px;
+  text-align: center;
+
+}
+#history hr {
+  width: 60%;
+}

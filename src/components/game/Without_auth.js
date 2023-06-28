@@ -5,7 +5,8 @@ import InitGame from "./InitGame";
 import CustomDialog from "../CustomDialog";
 import socket from "./socket";
 import {Button, TextField} from "@mui/material";
-import {NavLink} from "react-router-dom";
+import Header from "../header";
+
 
 export default function Without_auth() {
     const [username, setUsername] = useState("");
@@ -34,16 +35,13 @@ export default function Without_auth() {
     }, []);
 
     return (
-        <Container>
-            <Button>
-                <NavLink to = "/">На главную</NavLink>
-            </Button>
-
-{/*            <CustomDialog
+        <Container style={{padding: 0}}>
+            <Header/>
+            <CustomDialog
                 open={!usernameSubmitted}
                 handleClose={() => setUsernameSubmitted(true)}
-                title="Pick a username"
-                contentText="Please select a username"
+                title="Введите своё имя"
+
                 handleContinue={() => {
                     if (!username) return;
                     socket.emit("username", username);
@@ -54,8 +52,8 @@ export default function Without_auth() {
                     autoFocus
                     margin="dense"
                     id="username"
-                    label="Username"
-                    name="username"
+                    label="Имя"
+                    name="username1"
                     value={username}
                     required
                     onChange={(e) => setUsername(e.target.value)}
@@ -63,8 +61,9 @@ export default function Without_auth() {
                     fullWidth
                     variant="standard"
                 />
-            </CustomDialog>*/}
+            </CustomDialog>
             {room ? (
+
                 <Game
                     room={room}
                     orientation={orientation}

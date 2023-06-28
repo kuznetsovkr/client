@@ -19,6 +19,7 @@ const Header = () => {
                         <p><NavLink id = "to_login" to = "/login">Войти</NavLink></p>
                     }
                     {isAuth && <button onClick={() => dispatch(logout()) }>Выход</button> }
+                    {/*<NavLink id = "to_lk" to = "/lk">Личный кабинет</NavLink>*/}
                 </div>
             </header>
     )

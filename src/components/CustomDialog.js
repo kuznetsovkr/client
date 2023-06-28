@@ -16,7 +16,7 @@ export default function CustomDialog({ open, children, title, contentText, handl
         {children}
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleContinue}>Continue</Button>
+        <Button onClick={handleContinue}>Далее</Button>
       </DialogActions>
     </Dialog>
   );

@@ -8,6 +8,7 @@ import Login from "./components/authorization/Login";
 import Header from "./components/header";
 import {useDispatch, useSelector} from "react-redux";
 import {auth} from "./actions/user";
+import UserCabinet from "./components/user_cabinet";
 
 function App() {
     const isAuth = useSelector(state => state.user.isAuth)
@@ -18,6 +19,7 @@ function App() {
     })
 
     return (
+
         <Router>
             <Routes>
                 <Route path="/" element={<Hello_page/>} />
@@ -25,6 +27,7 @@ function App() {
                 <Route path="/registration" element={<Registration/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/game_not_auth" element={<Game_without_auth/>} />
+                <Route path="/lk" element={<UserCabinet/>}/>
             </Routes>
         </Router>
     );

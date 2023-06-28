@@ -11,6 +11,8 @@ const Main_page = () => {
     const isAuth = useSelector(state => state.user.isAuth)
     const dispatch = useDispatch()
 
+
+
     return (
         <div id="main_container">
             <Header/>
